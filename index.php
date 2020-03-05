@@ -1,32 +1,24 @@
-<?php
+<!DOCTYPE html>
+<hmtl lang="pt-br">
 
-$catecorias = [];
-$catecorias[] = 'infatil';
-$catecorias[] = 'adolecente';
-$catecorias[] = 'adulto';
-print_r($catecorias);
+<head>
+	<meta charset="utf-8">
+    <title>Formulario de Inscrição</title>
+    <meta name="author" content="" >
+    <meta name="description" content="" >
+    <meta name="viewport" content="width=device.width, initial-scale=1" >
+</head>
 
-$nome = 'Eduardo';
-$idade =  18;
-var_dump($nome);
-var_dump($idade);
+<body>
 
-if ($idade >= 6  && $idade <= 12) {
-    for ($i = 0; $i <= count($catecorias); $i++) {
-        if ($catecorias[$i] == 'infantil')
-            echo "O nadador " . $nome . " compete na catecoria infatil";
-    }
-    //echo 'infatil';
-} else if ($idade >= 13  && $idade <= 18) {
-    for ($i = 0; $i <= count($catecorias); $i++) {
-        if ($catecorias[$i] == 'adolecente')
-            echo "O nadador " . $nome . " compete na catecoria adolecente";
-    }
-    //echo 'adolecente';
-} else {
-    for ($i = 0; $i <= count($catecorias); $i++) {
-        if ($catecorias[$i] == 'adulto')
-            echo "O nadador " . $nome . " compete na catecoria adulto";
-    }
-    //echo 'adulto';
-}
+	<h2>Formulario para inscrição de competidores</h2>
+
+	    <form method="post" action="script.php">
+            <p>Seu nome: <input type="text" name="nome"/></p>
+            <p>Sua idade: <input type="text" name="idade"/></p>
+            <p><input type="submit" value="Enviar Dados do Competidor"/></p>
+        </form>
+        
+</body>
+
+</hmtl>
