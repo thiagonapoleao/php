@@ -29,7 +29,7 @@ include "servicos/servicoMensagemSessao.php";
             }
             ?>
             <p>Seu nome: <input type="text" name="nome" /></p>
-            <p>Sua idade: <input type="number" name="idade" /></p>
+            <p>Sua idade: <input type="text" name="idade" /></p>
             <p><input type="submit" value="Enviar Dados do Competidor" /></p>
         </form>
 

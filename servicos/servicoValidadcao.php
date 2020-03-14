@@ -4,13 +4,13 @@
 function validaNome(string $nome): bool
 {
     if (empty($nome)) {
-        setarMensagemErro( $mensagem = 'O nome não pode conter menos que 3 caractres ');
+        setarMensagemErro( $mensagem = 'O nome não pode ser vazio! ');
         return false;
     } else if (strlen($nome) < 3) {
-        setarMensagemErro( $mensagem = 'O nome não pode conter menos que 3 caractres ');
+        setarMensagemErro( $mensagem = 'O nome não pode conter menos que 3 caractres! ');
         return false;
     } else if (strlen($nome) > 40) {
-        setarMensagemErro( $mensagem = 'O nome não pode conter mais que 40 caractres ');
+        setarMensagemErro( $mensagem = 'O nome não pode conter mais que 40 caractres! ');
         return false;
     }
     return true;
