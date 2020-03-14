@@ -13,25 +13,6 @@ $idade = $_POST['idade'];
 var_dump($nome);
 var_dump($idade);
 
-if (empty($nome)) {
-    $_SESSION['mensgem-de-erro'] = 'O nome não pode ser vazio';
-    header(string 'location: index.php');
-    return;
-} else if (strlen($nome) < 3) {
-    $_SESSION['mensgem-de-erro'] = 'O nome não pode conter menos que 3 caractres ';
-    header(string 'location: index.php');
-    return;
-} elseif (strlen($nome) > 40) {
-    $_SESSION['mensgem-de-erro'] = 'O nome não pode conter mais que 40 caractres ';
-    header(string 'location: index.php');
-    return;
-} else if (!is_numeric($idade)) {
-    $_SESSION['mensgem-de-erro'] = 'Informe a idade do competidor ';
-    header(string 'location: index.php');    
-    return;
-}
-
-
 if ($idade >= 6  && $idade <= 12) {
     for ($i = 0; $i <= count($catecorias); $i++) {
         if ($catecorias[$i] == 'infantil')
