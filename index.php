@@ -18,7 +18,15 @@ session_start();
 
         <form method="post" action="script.php">
         <?php
-             $mensagemDeErro = isset($_SSESION['mensagem de derro']) ? $_SSESION['mensagem de erro']
+          $mensagemDeSucesso = isset($_SSESION['mensagem-de-sucesso']) ? $_SSESION['mensagem-de-sucesso'] : '';
+          if(!empty($mensagemDeSucesso)){
+              echo $mensagemDeSucesso;
+          }
+
+          $mensagemDeErro = isset($_SSESION['mensagem-de-erro']) ? $_SSESION['mensagem-de-erro'] : '';
+          if(!empty($mensagemDeErro)){
+              echo $mensagemDeErro;
+          }
         ?>
             <p>Seu nome: <input type="text" name="nome" /></p>
             <p>Sua idade: <input type="number" name="idade" /></p>

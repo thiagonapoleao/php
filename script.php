@@ -16,9 +16,9 @@ var_dump($idade);
 if ($idade >= 6  && $idade <= 12) {
     for ($i = 0; $i <= count($catecorias); $i++) {
         if ($catecorias[$i] == 'infantil')
-          // echo "O nadador " . $nome . " compete na catecoria infatil";   --  para quando for aparecer um outra pagina a mensagem
-          $_SESSION['mensagem-de-sucesso'] = "O nadador " . $nome . " compete na catecoria infatil";
-          header( string "locatioin: index.php");
+          // echo "O nadador " . $nome . " compete na catecoria infatil";   --  para quando for aparecerum outra pagina a mensagem
+          $_SESSION['mensagem-de-sucesso'] = "O nadador " . $nome . " compete na catecoria infatil";      
+          header( 'Location: index.php');
           return;
         }   
 } else if ($idade >= 13  && $idade <= 18) {
@@ -26,7 +26,7 @@ if ($idade >= 6  && $idade <= 12) {
         if ($catecorias[$i] == 'adolecente')
             //echo "O nadador " . $nome . " compete na catecoria adolecente"; --  para quando for aparecer um outra pagina a mensagem
             $_SESSION['mensagem-de-sucesso'] = "O nadador " . $nome . " compete na catecoria adolecente";
-            header( string "locatioin: index.php");
+            header( 'Location: index.php');
             return;
     }   
 } else {
@@ -34,7 +34,8 @@ if ($idade >= 6  && $idade <= 12) {
         if ($catecorias[$i] == 'adulto')
             //echo "O nadador " . $nome . " compete na catecoria adulto"; --  para quando for aparecer um outra pagina a mensagem
             $_SESSION['mensagem-de-sucesso'] = "O nadador " . $nome . " compete na catecoria adulto";
-            header( string "locatioin: index.php");
+            header('Location: index.php');
             return;
     }    
 }
+?>
